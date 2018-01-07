@@ -1,6 +1,6 @@
 O escopo é o que determina em que pontos do código uma variável pode ser usada.
 
-##Variáveis locais
+## Variáveis locais
 Chamamos de locais as variáveis declaradas dentro de métodos ou construtores. Antes de continuar, vamos estabelecer uma regra básica: o ciclo de vida de uma variável local vai do ponto onde ela foi declarada até o fim do bloco onde ela foi declarada.
 
 Mas o que é um bloco? Podemos entender como bloco um trecho de código entre chaves. Pode ser um método, um construtor, o corpo de um if, de um for etc.:
@@ -31,22 +31,21 @@ System.out.println(j); // erro, já não está mais no escopo
 Parâmetros de métodos também podem ser considerados variáveis locais ao método, ou seja, só podem ser usados dentro do método onde foram declarados:
 
 ```
-    class Teste {
+class Teste {
 
-        public void m1(String bla) {
-            System.out.print(bla);
-        }
-
-        public void m2() {
-            // erro de compilação pois bla não existe neste
-            // escopo
-            System.out.println(bla);
-        }
+    public void m1(String bla) {
+        System.out.print(bla);
     }
 
-```    
+    public void m2() {
+        // erro de compilação pois bla não existe neste
+        // escopo
+        System.out.println(bla);
+    }
+}
+```
     
-##Variáveis de instância
+## Variáveis de instância
 Variáveis de instância ou variáveis de objeto são os atributos dos objetos. São declaradas dentro da classe, mas fora de qualquer método ou construtor. Podem ser acessadas por qualquer membro da classe e ficam em escopo enquanto o objeto existir:
 
 ```
@@ -59,8 +58,9 @@ class Pessoa {
         this.nome = n;
     }
 }
+
 ```
-##Variáveis estáticas (class variables)
+## Variáveis estáticas (class variables)
 Podemos declarar variáveis que são compartilhadas por todas as instâncias de uma classe usando a palavra chave static. Essas variáveis estão no escopo da classe, e lá ficarão enquanto a classe estiver carregada na memória (enquanto o programa estiver rodando, na grande maioria dos casos).
 
 ```
