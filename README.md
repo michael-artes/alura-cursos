@@ -1,2 +1,2 @@
 # alura-cursos
-Repositório destinado aos cursos realizados na Alura
+Curso de certificação Java OJCP
