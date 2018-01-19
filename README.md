@@ -1,2 +1,2 @@
 # alura-cursos
-Repositório destinado aos cursos realizados na Alura
+Curso Git: Controle e compartilhe seu código
