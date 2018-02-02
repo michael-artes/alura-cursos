@@ -1,0 +1,3 @@
+# mapeamento valido
+java.util.String = java.util.ArrayList
+java.util.Map = java.util.HashMap
