@@ -1,6 +1,7 @@
 # Curso Linux I: Conhecendo e utilizando o terminal
 
 | Comando  | Descrição |
+| ------------- | ------------- |
 | xtem -bg white -fg black | abre o terminal com fundo branco e letras pretas |
 | who | mostra os usuários logados no sistema |
 | w | também mostra os usuários logados no sistema |
