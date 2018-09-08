@@ -3,13 +3,21 @@
 </p>
 
 <ol class="list-unstyled row">
-    <li *ngFor="let cols of rows" class="row">
-        <div *ngFor="let photo of cols" class="col-4">
-            <app-photo
-                [url]="photo.url"
-                [description]="photo.description">
-            </app-photo>
+    <li *ngFor="let cols of rows" class="row no-gutters">
+        <div *ngFor="let photo of cols" class="col-4" appDarkenOnHover brightness="20%">
+
+            <app-card>
+                <app-photo
+                    [url]="photo.url"
+                    [description]="photo.description">
+                </app-photo>
+    
+                <div class="text-center">
+                    <i class="fa fa-heart-o fa-1x mr-2"> {{photo.like}} </i>
+                    <i class="fa fa-comment-o fa-1x mr-2 ml-2"> {{photo.comments}} </i>
+                </div>
+            </app-card>
+
         </div>
     </li>
 </ol>
-
