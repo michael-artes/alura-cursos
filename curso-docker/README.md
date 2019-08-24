@@ -27,6 +27,12 @@ docker ps -a
 docker container prune
 ```
 
+Parar todos de uma só vez
+```bash
+docker stop $(docker ps -q)
+```
+
+
 ## Remover Imagem
 
 ```bash
