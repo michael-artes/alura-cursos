@@ -12,6 +12,13 @@ flags: -a, de attach, para integrar os terminais, e -i, de interactive, para int
 docker start -a -i 05025384675e
 ```
 
+## Stop
+
+Parar todos de uma só vez
+```bash
+docker stop $(docker ps -q)
+```
+
 ## Remover container
 
 ```bash
@@ -26,12 +33,6 @@ docker ps -a
 ```bash
 docker container prune
 ```
-
-Parar todos de uma só vez
-```bash
-docker stop $(docker ps -q)
-```
-
 
 ## Remover Imagem
 
