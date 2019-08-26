@@ -2,40 +2,31 @@
 
 Alguns comandos uteis para se trabalhar com docker
 
-## Start
 
-O comando inicia um conteiner já criado
+docker ps - exibe todos os containers em execução no momento.
 
-flags: -a, de attach, para integrar os terminais, e -i, de interactive, para interagirmos com o terminal
+docker ps -a - exibe todos os containers, independentemente de estarem em execução ou não.
 
-```bash
-docker start -a -i 05025384675e
-```
+docker run -it NOME_DA_IMAGEM - conecta o terminal que estamos utilizando com o do container.
 
-## Stop
+docker start ID_CONTAINER - inicia o container com id em questão.
 
-Parar todos de uma só vez
-```bash
-docker stop $(docker ps -q)
-```
+docker stop ID_CONTAINER - interrompe o container com id em questão.
 
-## Remover container
+docker start -a -i ID_CONTAINER - inicia o container com id em questão e integra os terminais, além de permitir interação entre ambos.
 
-```bash
-docker rm c9f83bfb82a8
-```
+docker rm ID_CONTAINER - remove o container com id em questão.
 
-## Remover Containers inativos
+docker container prune - remove todos os containers que estão parados.
 
-Esta comando irá remover os containers criados que estão inativos, para ver os inativos o comando é:
-docker ps -a
+docker rmi NOME_DA_IMAGEM - remove a imagem passada como parâmetro.
 
-```bash
-docker container prune
-```
+docker run -d -P --name NOME dockersamples/static-site - ao executar, dá um nome ao container.
 
-## Remover Imagem
+docker run -d -p 12345:80 dockersamples/static-site - define uma porta específica para ser atribuída à porta 80 do container, neste caso 12345.
 
-```bash
-docker rmi hello-world
-```
+docker run -d -e AUTHOR="Fulano" dockersamples/static-site - define uma variável de ambiente AUTHOR com o valor Fulano no container criado.
+
+docker run -v "CAMINHO_VOLUME" NOME_DA_IMAGEM - cria um volume no respectivo caminho do container.
+
+docker inspect ID_CONTAINER - retorna diversas informações sobre o container.
