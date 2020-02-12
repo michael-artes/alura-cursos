@@ -8,7 +8,7 @@ public class ICSS implements Imposto {
 
 	@Override
 	public String toString() {
-		return "ICSS Ã© de 3%";
+		return "ICSS é de 3%";
 	}
 
 }

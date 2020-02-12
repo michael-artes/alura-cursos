@@ -8,7 +8,7 @@ public class ICMS implements Imposto {
 
 	@Override
 	public String toString() {
-		return "ICMS Ã© de 6%";
+		return "ICMS é 6%";
 	}
 	
 }
