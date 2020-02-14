@@ -1,10 +1,5 @@
 import java.util.List;
 
-/**
- * 
- * Exemplo de Template Method
- * 
- * */
 abstract class Relatorio {
 	protected abstract void cabecalho();
 
