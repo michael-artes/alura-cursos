@@ -56,9 +56,7 @@ public class NotaFiscal {
 
 	@Override
 	public String toString() {
-		return "NotaFiscal [razaoSocial=" + razaoSocial + ", cnpj=" + cnpj + ", itemsNota=" + itemsNota
-				+ ", valorBruto=" + valorBruto + ", impostos=" + impostos + ", observacoes=" + observacoes + ", data="
-				+ data + "]";
+		return "NotaFiscal [razaoSocial=" + razaoSocial + ", cnpj=" + cnpj + "]";
 	}
 
 	
